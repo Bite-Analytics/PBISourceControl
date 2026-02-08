@@ -54,6 +54,18 @@ table 'Custom Group'
 			"Top " & [Selected TopN] & " Products by Sales"
 		lineageTag: ff66c8ba-4262-4fc6-82bf-622f4b9ebe0f
 
+	measure 'Total Costs' = SUM(FactInternetSales[TotalProductCost])
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: e16c3ee5-94e9-4d5d-ad2c-b58cff87c835
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure Profit = [Sales Amount] - [Total Costs]
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: fe22adaf-1dbb-4796-94da-862a90bb636f
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
 	column Country
 		dataType: string
 		lineageTag: 11c4bc34-25f4-4407-9776-d3e6ddee6de5
