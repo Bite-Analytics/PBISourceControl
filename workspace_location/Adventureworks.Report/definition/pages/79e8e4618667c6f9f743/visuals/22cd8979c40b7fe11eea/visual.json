@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "22cd8979c40b7fe11eea",
+  "position": {
+    "x": 801.587651598677,
+    "y": 60.683572216097019,
+    "z": 2,
+    "height": 299.18412348401324,
+    "width": 297.77287761852261
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Custom Group"
+                    }
+                  },
+                  "Property": "Total Costs"
+                }
+              },
+              "queryRef": "Custom Group.Total Costs",
+              "nativeQueryRef": "Total Costs"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Custom Group"
+                  }
+                },
+                "Property": "Total Costs"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
