@@ -66,6 +66,10 @@ table 'Custom Group'
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
+	measure 'Version Measure' = 2
+		formatString: 0
+		lineageTag: 1cca0253-61fb-40e3-a09b-b21f0b144433
+
 	column Country
 		dataType: string
 		lineageTag: 11c4bc34-25f4-4407-9776-d3e6ddee6de5
